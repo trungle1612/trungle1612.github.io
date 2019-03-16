@@ -56,17 +56,21 @@ The results populate based on relevance to the search query. Google or other sea
 so higher-ranked pages appear closer to the top.
 User that have found sites this way are said to have found it `organically`
 
-12. Shipping
+12. Peer to Peer(P2P Marketplace)
+- A peer-to-peer is an online platform that connects people in need of a product temporarily with people who have products, but are not using.
+Through P2P marketplace, people can rent out product in exchange of money or a similar product only for the time they need it.
+
+13. Shipping
 - Physically transferring a product from the seller's warehouse to the customer's delivery address.
 
-13. Shopping Cart
+14. Shopping Cart
 - An eCommerce shopping cart is the contents of what a user has added to his online order.
 All the products appear as a mass order on the page or in this case `in the cart`
 
-14. Transaction
+15. Transaction
 - A record of actions taken for every order.
 
-8. Wholesale
+16. Wholesale
 - the distributor or manufactuer, this is the party that sells directly to retailers.
 
 

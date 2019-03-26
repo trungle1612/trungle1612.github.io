@@ -3,12 +3,12 @@ title_left    : "Mrlonely"
 title_right   : "" # default: ""
 description   : "Note kepper"
 keywords      : Ruby, Rails, programming, books, guitar
-url           : https://trungle1612.github.io/
+url           : https://trungle1612.github.io
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover         : "https://avatars1.githubusercontent.com/u/44219463?s=400&u=5492d730c5a64e7cea129a34f052cab637aee86f&v=4" # image uri like logo/cover image for site seo
+cover         : /images/44219463.png # image uri like logo/cover image for site seo
 
 google_analytics  : UA-XXXXX-XX
-twitter_username  : "https://twitter.com/LeXuanTrung8"
+twitter_username  : LeXuanTrung8
 comments_enabled  : false # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
 postshare_enabled : false
@@ -28,7 +28,9 @@ sass:
 
 # Author settings
 author:
-  name     : "Mrlonely"
+  name     : Mrlonely
+  picture  : /images/44219463.jpg
+
 
 plugins:
   - jekyll-sitemap

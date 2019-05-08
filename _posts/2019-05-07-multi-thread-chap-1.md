@@ -8,6 +8,7 @@ title: Multithreads in Ruby Chap 1
 ## [ 3. GIL ](#gil)
 ---
 ---
+
 # Process
   - #### Pro
     - Don't share memory => Can't mutate data from one process in another.
@@ -20,22 +21,24 @@ title: Multithreads in Ruby Chap 1
   - #### Examples:
     - `Unicorn` server - it loads the applications, forks the master process to spawn multiple worker which accept HTTP request.
     - `Resque` for background processing, it runs a worker, which executes each job sequentially in forked child process.
+
 ---
 ---
 # Thread
-  - Only one thread can be executing at any given time within a single process.
-  - ## Pro
+  - #### Pro
     - Uses less memory than process, it's possible to run thoundands of threads. 
     - They are also fast to create and destroy
     - Threads are useful when there are slow blocking I/O opearations.
     - Can acess the memory area from other threads if necessary.
-  - ## Cons
+  - #### Cons
     - Requires very careful synchronization to avoid race-conditions, usually by using locking primitives, which sometimes may lead to deadlocks.
     - All this makes it quire difficult to write, test and debug thread-safe code.
     - The more threads you spawn, the more time and resources they'll be spending by switching the context and spending lesstime doing the actual job.
+
 ---
 ---
 # GIL
+  - Only one thread can be executing at any given time within a single process.
   - Avoids race conditions with C extensions, no need to worry about thread-safety.
   - Easier to implement, no need to make Ruby data structure thread-safe
   - GIL and blocking I/O

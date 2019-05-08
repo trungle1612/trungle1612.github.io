@@ -2,20 +2,27 @@
 layout: post
 title: Multithreads in Ruby Chap 1
 ---
-# Process & Thread
-- Process
-  - ## Pro
-  - Don't share memory => Can't mutate data from one process in another.
-  - Much easier to code and debug
-  - Forking child process may help avoid unwanted memory leaks. Once the process finishes, it releases all the resource.
-  - ## Cons
-  - Since process don't share memory, they use a lot of memory.
-  - From ruby 2.0  `fork` uses OS **Copy-On-Write** which allow processes to share memory as long as it doesn't have different values.
-  - Process are slow to create and destroy.
-  - ## Examples:
-  - `Unicorn` server - it loads the applications, forks the master process to spawn multiple worker which accept HTTP request.
-  - `Resque` for background processing, it runs a worker, which executes each job sequentially in forked child process.
-- Thread
+#  Trong phần đầu tiên sẽ nói về các terms (thuật ngữ) khi bạn làm việc với `Concurrency` trong `Ruby`
+## [ 1. Process ](#process)
+## [ 2. Thread ](#thread)
+## [ 3. GIL ](#gil)
+---
+---
+ - ## Process
+  - #### Pro
+    - Don't share memory => Can't mutate data from one process in another.
+    - Much easier to code and debug
+    - Forking child process may help avoid unwanted memory leaks. Once the process finishes, it releases all the resource.
+  - #### Cons
+    - Since process don't share memory, they use a lot of memory.
+    - From ruby 2.0  `fork` uses OS **Copy-On-Write** which allow processes to share memory as long as it doesn't have different values.
+    - Process are slow to create and destroy.
+  - #### Examples:
+    - `Unicorn` server - it loads the applications, forks the master process to spawn multiple worker which accept HTTP request.
+    - `Resque` for background processing, it runs a worker, which executes each job sequentially in forked child process.
+---
+---
+# Thread
   - Only one thread can be executing at any given time within a single process.
   - GIL:
     - Avoids race conditions with C extensions, no need to worry about thread-safety.
@@ -31,6 +38,9 @@ title: Multithreads in Ruby Chap 1
   - Requires very careful synchronization to avoid race-conditions, usually by using locking primitives, which sometimes may lead to deadlocks.
   - All this makes it quire difficult to write, test and debug thread-safe code.
   - The more threads you spawn, the more time and resources they'll be spending by switching the context and spending lesstime doing the actual job.
+---
+---
+# GIL
 
 
 

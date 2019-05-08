@@ -1,6 +1,6 @@
 ---
 layout: post
-title: note
+title: Multithreads in Ruby Chap 1
 ---
 # Process & Thread
 - Process

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multithreads in Ruby Chap 1
+title: Working with multirheaded in Ruby Chap 1
 ---
 #  In this chap 1 I will explain some terms when working with `Concurrency` in `Ruby`
 ### [ 1. Process ](#process)

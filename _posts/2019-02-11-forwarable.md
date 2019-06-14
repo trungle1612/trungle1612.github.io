@@ -6,7 +6,7 @@ title: Forwardable & Delegate
 ---
 
 1. Giới thiệu
- - Forwardable là một module có thể được sử dụng để thêm những tất cả methods của 1 object.
+ - Forwardable là một module có thể được sử dụng để thêm những tất cả methods của 1 `instance class`
 
 2. `def_delegator` method
  - Định nghĩa một method như `delegator instance method` với một alias name

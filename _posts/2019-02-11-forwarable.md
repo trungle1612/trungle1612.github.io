@@ -15,6 +15,7 @@ title: Forwardable & Delegate
  - Định nghĩa một mảng method như `delegator instance methods`
 
 4. Ví dụ
+
 ```ruby
 # people.rb
 class People
@@ -58,7 +59,9 @@ student = Student.new("Peter", "Pan")
 puts student.full_name
 puts student.country
 ```
+
 Result
+
 ```
 Peter Pan
 Viet Nam
